@@ -2,12 +2,17 @@
 
 // create layout component
 import React from "react";
+import "./layout.css"
+import {Link} from "gatsby";
+import Menu from "../menu/Menu"
 
 const Layout : React.FC = ({children}) => {
   return (
-    <div>
-      <h1>Layout</h1>
-      {children}
+    <div className={"container"}>
+      <main className="flex-shrink-0">
+          <Menu/>
+      </main>
+        {children}
     </div>
   );
 };
